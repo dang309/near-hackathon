@@ -34,7 +34,7 @@ export default function LoginForm() {
   } = methods;
 
   const onSubmit = async () => {
-    navigate('/dashboard', { replace: true });
+    navigate('/home', { replace: true });
   };
 
   return (

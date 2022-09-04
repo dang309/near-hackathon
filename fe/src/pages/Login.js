@@ -1,15 +1,12 @@
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Card, Link, Container, Typography } from '@mui/material';
-// hooks
-import useResponsive from '../hooks/useResponsive';
+import { Container } from '@mui/material';
 // components
 import Page from '../components/Page';
 import Logo from '../components/Logo';
 // sections
 import { LoginForm } from '../sections/auth/login';
-import AuthSocial from '../sections/auth/AuthSocial';
 
 // ----------------------------------------------------------------------
 
@@ -35,15 +32,6 @@ const HeaderStyle = styled('header')(({ theme }) => ({
   },
 }));
 
-const SectionStyle = styled(Card)(({ theme }) => ({
-  width: '100%',
-  maxWidth: 464,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  margin: theme.spacing(2, 0, 2, 2),
-}));
-
 const ContentStyle = styled('div')(({ theme }) => ({
   maxWidth: 480,
   margin: 'auto',
@@ -57,16 +45,12 @@ const ContentStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function Login() {
-  const smUp = useResponsive('up', 'sm');
-
-  const mdUp = useResponsive('up', 'md');
-
   return (
     <Page title="Login">
       <RootStyle>
-        <HeaderStyle>
+        {/* <HeaderStyle>
           <Logo />
-        </HeaderStyle>
+        </HeaderStyle> */}
 
         <Container maxWidth="sm">
           <ContentStyle>

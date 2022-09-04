@@ -3,6 +3,7 @@ import { memo, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Container, Box, Stack, Button } from '@mui/material';
 // components
+import { useNavigate } from 'react-router-dom';
 import NavSectionHorizontal from '../../components/nav-section/index';
 //
 import navConfig from './NavConfig';
@@ -27,6 +28,8 @@ const RootStyle = styled(Box)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 function NavbarHorizontal() {
+  const navigate = useNavigate();
+
   const [pnd, setPnD] = useState({
     open: false,
     type: '',
@@ -64,17 +67,7 @@ function NavbarHorizontal() {
           Book a trip
         </Button>
 
-        <Button
-          size="small"
-          variant="contained"
-          onClick={() =>
-            setPnD({
-              open: true,
-              type: 'passenger',
-            })
-          }
-          color="error"
-        >
+        <Button size="small" variant="contained" onClick={() => navigate('/login')} color="error">
           Sign out haidang309.testnet
         </Button>
       </Stack>

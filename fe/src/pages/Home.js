@@ -35,7 +35,7 @@ import { UserTableToolbar, UserTableRow } from '../sections/@dashboard/user';
 
 // ----------------------------------------------------------------------
 
-const STATUS_OPTIONS = ['all', 'active', 'banned'];
+const STATUS_OPTIONS = ['all', 'available driver', 'available passenger'];
 
 const ROLE_OPTIONS = [
   'all',
